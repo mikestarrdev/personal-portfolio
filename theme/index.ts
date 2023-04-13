@@ -8,6 +8,23 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const styles = {
+  global: {
+    html: {
+      scrollBehavior: "smooth",
+    },
+    body: {
+      m: 0,
+      p: 0,
+      bg: "white",
+      overflowX: "hidden",
+    },
+  },
+};
+
+const theme = extendTheme({
+  colors,
+  styles,
+});
 
 export default theme;
