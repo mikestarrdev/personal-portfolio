@@ -1,4 +1,4 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 
 interface LayoutProps {
@@ -10,9 +10,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Box
       w="100%"
       mx="auto"
-      px={["1rem", "5rem"]}
+      px={["1rem", "1rem", "1rem", "5rem"]}
       justifySelf="center"
-      border="1px"
     >
       {children}
     </Box>

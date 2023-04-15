@@ -1,16 +1,18 @@
 import About from "@/components/About";
 import Navbar from "@/components/Navbar";
 import ProjectsGrid from "@/components/ProjectsGrid";
-import { Inter } from "next/font/google";
-
-// const inter = Inter({ subsets: ["latin"] });
+import Layout from "@/components/Layout";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <About />
-      <ProjectsGrid />
+      <Layout>
+        <About />
+        <ProjectsGrid />
+      </Layout>
+      <Footer />
     </>
   );
 }

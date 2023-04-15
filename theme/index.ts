@@ -25,6 +25,10 @@ const styles = {
 const theme = extendTheme({
   colors,
   styles,
+  fonts: {
+    heading: `Inter, sans-serif`,
+    body: `Inter, sans-serif`,
+  },
 });
 
 export default theme;

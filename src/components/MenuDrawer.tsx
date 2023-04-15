@@ -6,6 +6,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Text,
   useDisclosure,
 } from "@chakra-ui/react";
 
@@ -22,9 +23,9 @@ const MenuDrawer = () => {
         <DrawerContent>
           <DrawerHeader borderBottomWidth="1px">Mike</DrawerHeader>
           <DrawerBody>
-            <p>Projects</p>
-            <p>Skills</p>
-            <p>About Me</p>
+            <Text>Projects</Text>
+            <Text>Skills</Text>
+            <Text>About Me</Text>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

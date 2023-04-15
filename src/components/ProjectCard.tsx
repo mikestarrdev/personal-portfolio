@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Button,
   ButtonGroup,
@@ -11,29 +12,33 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 import { ProjectDetails } from "../../types/ProjectDetails";
+import { FaGithub } from "react-icons/fa";
+import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({
   title,
   description,
-  image,
+  thumbnail,
+  videoLink,
   github,
   link,
 }: ProjectDetails) => {
   return (
-    <Card maxW="sm">
+    <Card h="full">
       <CardBody>
-        <Image src={image} alt={`${title} screenshot`} borderRadius="lg" />
-        <Stack mt="6" spacing="3">
+        <ProjectModal
+          title={title}
+          thumbnail={thumbnail || ""}
+          videoLink={videoLink}
+        />
+        <Stack mt="6" spacing="3" minH="25vh">
           <Heading size="md">{title}</Heading>
-          <Text>{description}</Text>
-          <Text color="blue.600" fontSize="base">
-            GitHub: {github}
+          <Text>
+            {description.substring(0, 75)}
+            {description.length > 75 ? "..." : null}
           </Text>
-          <Text color="blue.600" fontSize="base">
-            App: {link}
-          </Text>
+          <Button variant="outline">More</Button>
         </Stack>
       </CardBody>
       <Divider />
@@ -45,8 +50,9 @@ const ProjectCard = ({
             </Button>
           </Link>
           <Link href={github} target="_blank">
-            <Button variant="outline" colorScheme="blue">
-              GitHub
+            <Button variant="solid" colorScheme="blue">
+              <FaGithub />
+              <Text ml={1}>GitHub</Text>
             </Button>
           </Link>
         </ButtonGroup>
