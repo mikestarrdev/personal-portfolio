@@ -9,6 +9,7 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  HStack,
   IconButton,
   Text,
   VStack,
@@ -17,6 +18,8 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsMoonFill, BsSun } from "react-icons/bs";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import ConnectWallet from "./ConnectWallet";
 
 /**
  * @remarks drawer gets rendered in Navbar component. Clicking Hamburger icon opens drawer
@@ -48,15 +51,20 @@ const MenuDrawer = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <Box w="full">
-              <IconButton
-                aria-label="toggle theme"
-                rounded="md"
-                size="md"
-                onClick={toggleColorMode}
-                icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
-              />
-            </Box>
+            <HStack w="full">
+              <Box>
+                <ConnectWallet />
+              </Box>
+              <Box w="full">
+                <IconButton
+                  aria-label="toggle theme"
+                  rounded="md"
+                  size="md"
+                  onClick={toggleColorMode}
+                  icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
+                />
+              </Box>
+            </HStack>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

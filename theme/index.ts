@@ -1,5 +1,5 @@
 import { ThemeConfig, extendTheme } from "@chakra-ui/react";
-import Button from "./components/button";
+import Button from "./components/Button";
 
 const colors = {
   brand: {

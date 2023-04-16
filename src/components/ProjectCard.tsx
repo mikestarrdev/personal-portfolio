@@ -82,8 +82,6 @@ const ProjectCard = ({
       );
     });
 
-  console.log(technologies);
-
   return (
     <Card h="full">
       <CardBody>
