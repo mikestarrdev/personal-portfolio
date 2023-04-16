@@ -3,6 +3,7 @@ export type ProjectDetails = {
   description: string;
   github: string;
   link: string;
-  thumbnail?: string;
-  videoLink?: string;
+  thumbnail: string;
+  videoLink: string;
+  technologies: string[];
 };

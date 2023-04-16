@@ -14,6 +14,7 @@ const ProjectsGrid = () => {
           videoLink={project.videoLink}
           github={project.github}
           link={project.link}
+          technologies={project.technologies}
         />
       </GridItem>
     );

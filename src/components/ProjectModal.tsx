@@ -10,6 +10,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
@@ -48,19 +49,26 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
     }
   };
 
-  console.log(title);
-
   return (
     <>
-      <Box
-        boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-        _hover={{
-          transform: "translateY(1px)",
-        }}
-        onClick={onOpen}
+      <Tooltip
+        label="Video demo"
+        aria-label="Video demo"
+        fontSize="lg"
+        placement="top"
+        hasArrow
       >
-        <Image src={`${thumbnail}`} alt={`${title} demo`} />
-      </Box>
+        {/* replacement for button */}
+        <Box
+          boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
+          _hover={{
+            transform: "translateY(1px)",
+          }}
+          onClick={onOpen}
+        >
+          <Image src={`${thumbnail}`} alt={`${title} demo`} />
+        </Box>
+      </Tooltip>
 
       <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
@@ -68,12 +76,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
           <ModalHeader>{title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box
-              position="relative"
-              overflow="scroll"
-              // paddingTop="56.25%"
-              // border="1px solid red" overflow="auto"
-            >
+            <Box position="relative" overflow="scroll">
               {videoLink && video(videoLink, false)}
             </Box>
           </ModalBody>
@@ -82,7 +85,6 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
             <Button variant="outline" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
