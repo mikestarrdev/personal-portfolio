@@ -102,7 +102,9 @@ const ConnectWallet = () => {
                     >
                       <HStack>
                         <Icon as={FiKey} color="white" />
-                        <Box color="white">Wallet</Box>
+                        <Box color="black" _dark={{ color: "white" }}>
+                          Wallet
+                        </Box>
                       </HStack>
                     </MenuItem>
                     <MenuItem
@@ -111,7 +113,7 @@ const ConnectWallet = () => {
                     >
                       <HStack spacing={2}>
                         <Icon as={FiXCircle} color="red.300" />
-                        <Box color="red.300">Sign Out</Box>
+                        <Box color="red.300">Disconnect</Box>
                       </HStack>
                     </MenuItem>
                   </MenuList>

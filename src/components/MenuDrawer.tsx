@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsMoonFill, BsSun } from "react-icons/bs";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import ConnectWallet from "./ConnectWallet";
 
 /**
@@ -51,11 +50,11 @@ const MenuDrawer = () => {
           </DrawerBody>
 
           <DrawerFooter>
-            <HStack w="full">
+            <HStack w="full" justifyContent="space-between">
               <Box>
                 <ConnectWallet />
               </Box>
-              <Box w="full">
+              <Box>
                 <IconButton
                   aria-label="toggle theme"
                   rounded="md"

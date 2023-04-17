@@ -83,7 +83,14 @@ const ProjectCard = ({
     });
 
   return (
-    <Card h="full">
+    <Card
+      h="full"
+      _dark={{
+        bg: "black",
+        border: "solid 1px white",
+        shadow: "1px 1px 1px white",
+      }}
+    >
       <CardBody>
         <ProjectModal
           title={title}

@@ -1,5 +1,14 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  HStack,
+  Heading,
+  Link,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import React from "react";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const About = () => {
   return (
@@ -20,8 +29,39 @@ const About = () => {
         make the web come alive. And when it comes to the backend, I&#39;m no
         stranger to NodeJS and Ruby on Rails.
       </Text>
-      <br />
-      <Text>Let&#39;s build something awesome together!</Text>
+
+      {/* start socials */}
+      <HStack
+        spacing="1rem"
+        w="fit-content"
+        m="auto"
+        textAlign="left"
+        my="1rem"
+        fontSize="lg"
+      >
+        <Link href="https://github.com/personnamedmike/" target="_blank">
+          <Flex alignItems="center" w="fit-content">
+            <FaGithub />
+            <Text ml="0.5rem">GitHub</Text>
+          </Flex>
+        </Link>
+
+        <Link
+          href="https://github.com/personnamedmike/personal-portfolio"
+          target="_blank"
+        >
+          <Flex alignItems="center">
+            <FaLinkedin />
+            <Text ml="0.5rem">LinkedIn</Text>
+          </Flex>
+        </Link>
+        <Link href="https://twitter.com/starr_dev" target="_blank">
+          <Flex alignItems="center">
+            <FaTwitter />
+            <Text ml="0.5rem">Twitter</Text>
+          </Flex>
+        </Link>
+      </HStack>
     </Box>
   );
 };

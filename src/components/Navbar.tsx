@@ -14,6 +14,7 @@ const Navbar = () => {
       border="1px"
       bg="gray.300"
       p="0.5rem"
+      _dark={{ bg: "black" }}
     >
       <Box>
         <MenuDrawer />

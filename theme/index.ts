@@ -1,5 +1,7 @@
 import { ThemeConfig, extendTheme } from "@chakra-ui/react";
+import { mode } from "@chakra-ui/theme-tools";
 import Button from "./components/Button";
+import Drawer from "./components/Drawer";
 
 const colors = {
   brand: {
@@ -11,6 +13,7 @@ const colors = {
 
 const components = {
   Button,
+  Drawer,
 };
 
 const styles = {
@@ -21,12 +24,9 @@ const styles = {
     body: {
       m: 0,
       p: 0,
-      bg: "white",
       overflowX: "hidden",
-      _dark: {
-        bg: "black",
-        color: "white",
-      },
+      bg: mode("white", "black"),
+      color: mode("black", "white"),
     },
   },
 };

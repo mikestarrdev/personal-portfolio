@@ -11,7 +11,6 @@ const Button = defineStyleConfig({
       bg: "white",
       color: "black",
       border: "1px solid black",
-      // dark mode:
       _dark: {
         bg: "black",
         color: "white",

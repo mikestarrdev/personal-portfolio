@@ -60,13 +60,20 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
       >
         {/* replacement for button */}
         <Box
+          onClick={onOpen}
           boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
           _hover={{
             transform: "translateY(1px)",
           }}
-          onClick={onOpen}
         >
-          <Image src={`${thumbnail}`} alt={`${title} demo`} />
+          <Image
+            src={`${thumbnail}`}
+            alt={`${title} demo`}
+            _dark={{
+              border: "1px white solid",
+              rounded: "sm",
+            }}
+          />
         </Box>
       </Tooltip>
 
