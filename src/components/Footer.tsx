@@ -12,6 +12,7 @@ const Footer = () => {
         spacing="1rem"
         bg="brand.accent"
         color="white"
+        fontSize={["xs", "md"]}
         _dark={{
           bg: "black",
           color: "neonYellow",
