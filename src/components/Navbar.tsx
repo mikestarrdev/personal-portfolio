@@ -11,8 +11,7 @@ const Navbar = () => {
   return (
     <HStack
       justifyContent="space-between"
-      borderBottom="1px"
-      borderTop="1px"
+      border="1px"
       bg="blue.700"
       p="0.5rem"
       _dark={{
