@@ -11,7 +11,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       w="100%"
       mx="auto"
       py="1rem"
-      px={["0rem", "1rem", "1rem", "5rem"]}
+      px={["0.5rem", "1rem", "1rem", "5rem"]}
       justifySelf="center"
     >
       {children}
