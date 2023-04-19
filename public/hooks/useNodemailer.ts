@@ -6,7 +6,7 @@ import { MailData } from "../../types/MailData";
  * @returns hook with a fetch request to the server to send an email to the user who is being requested funds from.
  */
 const UseNodemailer = async (data: MailData) => {
-  return await fetch("/api/auth/contact", {
+  return await fetch("/api/contact", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -14,7 +14,6 @@ const UseNodemailer = async (data: MailData) => {
     },
     body: JSON.stringify(data),
   }).then((res) => {
-    console.log(res);
     if (res.ok) {
       console.log("response ok");
       return res.json();
