@@ -3,7 +3,7 @@ import { Box, HStack, useColorMode, IconButton } from "@chakra-ui/react";
 import React from "react";
 import MenuDrawer from "./MenuDrawer";
 import { BsSun, BsMoonFill } from "react-icons/bs";
-import ConnectWallet from "./ConnectWallet";
+// import ConnectWallet from "./ConnectWallet";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -11,7 +11,8 @@ const Navbar = () => {
   return (
     <HStack
       justifyContent="space-between"
-      border="1px"
+      borderBottom="1px"
+      borderTop="1px"
       bg="blue.700"
       p="0.5rem"
       _dark={{

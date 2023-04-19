@@ -34,7 +34,7 @@ const ProjectsGrid = () => {
         Projects
       </Heading>
 
-      <SimpleGrid columns={[1, 1, 3]} spacing="1rem">
+      <SimpleGrid columns={[1, 1, 3]} spacing={["1rem", "2rem"]}>
         {renderMajorProjects}
       </SimpleGrid>
     </>
