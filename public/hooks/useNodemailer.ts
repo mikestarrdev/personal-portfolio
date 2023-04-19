@@ -1,4 +1,9 @@
-import { MailData } from "../../types/MailData";
+type MailData = {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+};
 
 /**
  * @remarks - hook gets called when a user requests funds from another user. Hook sends a request to the server to send an email to the user who is being requested funds from. Hook gets called in ReviewTransfer component after user confirms inputs.
