@@ -6,6 +6,7 @@ import { WagmiConfig } from "wagmi";
 import wagmiClient, { chains } from "../../utils/wagmiConfig";
 import { RainbowKitProvider, darkTheme } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
+import "@fontsource/inter";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
