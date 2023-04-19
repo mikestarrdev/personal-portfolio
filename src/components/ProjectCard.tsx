@@ -14,7 +14,7 @@ import {
   Text,
   Tooltip,
 } from "@chakra-ui/react";
-import { ProjectDetails } from "../../types/ProjectDetails";
+import { MainProjectDetails } from "../../types/ProjectDetails";
 import { FaGithub } from "react-icons/fa";
 import {
   SiTypescript,
@@ -25,8 +25,11 @@ import {
   SiGraphql,
   SiNodedotjs,
   SiVercel,
+  SiNextdotjs,
+  SiStorybook,
 } from "react-icons/si";
 import { AiOutlineApi } from "react-icons/ai";
+import { RxOpenInNewWindow } from "react-icons/rx";
 import ProjectModal from "./ProjectModal";
 
 const ProjectCard = ({
@@ -37,7 +40,7 @@ const ProjectCard = ({
   github,
   link,
   technologies,
-}: ProjectDetails) => {
+}: MainProjectDetails) => {
   // pass techIcon indo renderIcons
   const techIcon = (technology: string) => {
     let icon;
@@ -54,7 +57,10 @@ const ProjectCard = ({
       case "React":
         icon = <SiReact />;
         break;
-      case "REST":
+      case "Next.js":
+        icon = <SiNextdotjs />;
+        break;
+      case "REST API":
         icon = <AiOutlineApi />;
         break;
       case "TailwindCSS":
@@ -68,6 +74,9 @@ const ProjectCard = ({
         break;
       case "Vercel":
         icon = <SiVercel />;
+        break;
+      case "storybook":
+        icon = <SiStorybook />;
         break;
     }
     return icon;
@@ -88,25 +97,21 @@ const ProjectCard = ({
       _dark={{
         bg: "black",
         border: "solid 1px white",
-        shadow: "1px 1px 1px white",
       }}
     >
       <CardBody>
-        <ProjectModal
-          title={title}
-          thumbnail={thumbnail || ""}
-          videoLink={videoLink}
-        />
-
-        <Stack
-          mt="6"
-          spacing="3"
-          // minH="25vh"
-          overflowY="scroll"
-        >
-          <Heading as="h2" size="lg" textAlign="center">
+        <Stack spacing="3" overflowY="scroll">
+          <Heading as="h2" fontSize={["2xl"]} textAlign="center">
             {title}
           </Heading>
+          {thumbnail && (
+            <ProjectModal
+              title={title}
+              thumbnail={thumbnail || ""}
+              videoLink={videoLink}
+            />
+          )}
+
           <Text>{description}</Text>
           <Heading as="h1" fontSize="md">
             Technologies:
@@ -116,16 +121,28 @@ const ProjectCard = ({
       </CardBody>
       <Divider />
       <CardFooter>
-        <ButtonGroup spacing="2">
-          <Link href={link} target="_blank">
-            <Button colorScheme="black">App</Button>
-          </Link>
-          <Link href={github} target="_blank">
-            <Button colorScheme="black">
-              <FaGithub />
-              <Text ml={1}>GitHub</Text>
-            </Button>
-          </Link>
+        <ButtonGroup spacing="2" w="full">
+          <Box w="50%">
+            <Link href={link} target="_blank">
+              <Button variant="links" size="sm" w="full">
+                <Text mr="1">App</Text> <RxOpenInNewWindow />
+              </Button>
+            </Link>
+          </Box>
+          <Box w="50%">
+            {github ? (
+              <Link href={github} target="_blank">
+                <Button variant="links" size="sm" w="full">
+                  <FaGithub />
+                  <Text ml={1}>GitHub</Text>
+                </Button>
+              </Link>
+            ) : (
+              <Button variant="links" size="sm" w="full">
+                (Closed-Source)
+              </Button>
+            )}
+          </Box>
         </ButtonGroup>
       </CardFooter>
     </Card>

@@ -15,8 +15,6 @@ import {
   ledgerWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 
-console.log(process.env.NEXT_APP_ALCHEMY_ID);
-
 export const { chains, provider } = configureChains(
   [polygon],
   [

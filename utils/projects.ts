@@ -1,6 +1,6 @@
-import { ProjectDetails } from "../types/ProjectDetails";
+import { MainProjectDetails } from "../types/ProjectDetails";
 
-export const projectDetails: ProjectDetails[] = [
+export const majorProjectDetails: MainProjectDetails[] = [
   {
     title: "Kaching",
     description:
@@ -13,7 +13,7 @@ export const projectDetails: ProjectDetails[] = [
       "TypeScript",
       "JavaScript",
       "Node.js",
-      "React",
+      "Next.js",
       "REST API",
       "Chakra-UI",
       "Vercel",
@@ -30,7 +30,7 @@ export const projectDetails: ProjectDetails[] = [
     technologies: [
       "TypeScript",
       "JavaScript",
-      "React",
+      "Next.js",
       "GraphQL",
       "Chakra-UI",
       "Vercel",
@@ -46,27 +46,36 @@ export const projectDetails: ProjectDetails[] = [
     technologies: [
       "TypeScript",
       "JavaScript",
-      "React",
+      "Next.js",
       "REST API",
       "Chakra-UI",
     ],
   },
-  // {
-  //   title: "Summi",
-  //   description: "App which aggregates lectures from various conferences",
-  //   thumbnail: "wrapeth.png",
-  //   videoLink: "",
-  //   github: "",
-  //   link: "https://web3talks.com",
-  //   technologies: ["TypeScript", "JavaScript", "React", "REST API"],
-  // },
+  {
+    title: "Summit",
+    description: "App which aggregates lectures from various conferences",
+    github: null,
+    link: "https://withsummit.xyz/",
+    technologies: [
+      "TypeScript",
+      "JavaScript",
+      "Next.js",
+      "GraphQL",
+      "Chakra-UI",
+    ],
+  },
+  {
+    title: "RaidGuild Design System",
+    description: "Design system for branding",
+    github: "https://github.com/raid-guild/design-system",
+    link: "https://github.com/raid-guild/design-system",
+    technologies: ["TypeScript", "Chakra-UI", "storybook"],
+  },
   {
     title: "Octav3",
     description: "Make money from your music NFTs",
-    thumbnail: "",
-    videoLink: "",
-    github: "",
+    github: null,
     link: "https://www.octav3.com/",
-    technologies: ["TypeScript", "JavaScript", "React", "TailwindCSS"],
+    technologies: ["JavaScript", "React", "TailwindCSS"],
   },
 ];

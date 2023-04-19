@@ -10,9 +10,11 @@ import {
   DrawerHeader,
   DrawerOverlay,
   HStack,
+  Heading,
   IconButton,
-  Text,
-  VStack,
+  Link,
+  List,
+  ListItem,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -33,32 +35,45 @@ const MenuDrawer = () => {
       <Button variant="hamburger" onClick={onOpen}>
         <GiHamburgerMenu />
       </Button>
-      <Drawer placement="left" size="sm" onClose={onClose} isOpen={isOpen}>
+      <Drawer placement="left" size="xs" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
-            Mike&#39;s Portfolio
+            <Link href="/" _hover={{ textDecoration: "none" }}>
+              <Heading as="h1" fontSize="2xl">
+                Mike&apos;s Portfolio
+              </Heading>
+            </Link>
           </DrawerHeader>
           <DrawerBody>
-            <VStack alignItems="start" textAlign="left">
-              <Text>Work</Text>
-              <Text>Skills</Text>
-              <Text>About Me</Text>
-              <Text>NFT Collection</Text>
-            </VStack>
+            <List spacing={"0.5rem"}>
+              <ListItem>
+                <Link href="/" _hover={{ textDecoration: "none" }}>
+                  Home
+                </Link>
+              </ListItem>
+              {/* <ListItem>NFT Collection</ListItem> */}
+              <ListItem>
+                <Link
+                  href="contact"
+                  _hover={{ textDecoration: "none", cursor: "pointer" }}
+                >
+                  Contact
+                </Link>
+              </ListItem>
+            </List>
           </DrawerBody>
 
           <DrawerFooter>
             <HStack w="full" justifyContent="space-between">
-              <Box>
+              {/* <Box>
                 <ConnectWallet />
-              </Box>
+              </Box> */}
               <Box>
                 <IconButton
                   aria-label="toggle theme"
                   rounded="md"
-                  size="md"
                   onClick={toggleColorMode}
                   icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
                 />

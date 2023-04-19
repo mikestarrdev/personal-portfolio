@@ -1,9 +1,9 @@
-export type ProjectDetails = {
+export type MainProjectDetails = {
   title: string;
   description: string;
-  github: string;
+  github: string | null;
   link: string;
-  thumbnail: string;
-  videoLink: string;
   technologies: string[];
+  thumbnail?: string;
+  videoLink?: string;
 };

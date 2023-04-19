@@ -47,6 +47,7 @@ const ConnectWallet = () => {
                   disabled={isConnecting}
                   onClick={openConnectModal}
                   data-cy="connect-wallet"
+                  variant="links"
                 >
                   Connect
                 </Button>
@@ -55,7 +56,11 @@ const ConnectWallet = () => {
 
             if (chain.unsupported) {
               return (
-                <Button fontWeight="normal" onClick={openChainModal}>
+                <Button
+                  variant="links"
+                  fontWeight="normal"
+                  onClick={openChainModal}
+                >
                   Unsupported network
                 </Button>
               );
@@ -77,6 +82,7 @@ const ConnectWallet = () => {
 
                   <MenuButton
                     as={Button}
+                    variant="links"
                     fontWeight="normal"
                     rightIcon={
                       <Icon as={FiChevronDown} color="brand.primary.600" />
@@ -95,25 +101,42 @@ const ConnectWallet = () => {
                         : truncateAddress(account.address)}
                     </Flex>
                   </MenuButton>
-                  <MenuList backgroundColor="gray.800" minWidth="none" py={0}>
+                  <MenuList
+                    minWidth="none"
+                    py={0}
+                    border="1px solid #825C2C"
+                    _dark={{ bg: "black", border: "1px solid #FFFF00" }}
+                  >
                     <MenuItem
                       onClick={() => openAccountModal()}
-                      _hover={{ backgroundColor: "gray.600" }}
+                      _hover={{ backgroundColor: "neonYellow" }}
+                      _dark={{ bg: "black" }}
+                      rounded="md"
                     >
                       <HStack>
-                        <Icon as={FiKey} color="white" />
-                        <Box color="black" _dark={{ color: "white" }}>
-                          Wallet
-                        </Box>
+                        <Icon
+                          as={FiKey}
+                          color="brand.accent"
+                          _dark={{ color: "neonYellow" }}
+                        />
+                        <Box _dark={{ color: "neonYellow" }}>Wallet</Box>
                       </HStack>
                     </MenuItem>
                     <MenuItem
                       onClick={() => disconnect()}
                       _hover={{ backgroundColor: "gray.600" }}
+                      _dark={{ bg: "black" }}
+                      rounded="md"
                     >
                       <HStack spacing={2}>
-                        <Icon as={FiXCircle} color="red.300" />
-                        <Box color="red.300">Disconnect</Box>
+                        <Icon
+                          as={FiXCircle}
+                          color="brand.accent"
+                          _dark={{ color: "neonYellow" }}
+                        />
+                        <Box color="black" _dark={{ color: "neonYellow" }}>
+                          Disconnect
+                        </Box>
                       </HStack>
                     </MenuItem>
                   </MenuList>

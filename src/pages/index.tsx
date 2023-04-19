@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <Navbar />
       <Layout>
-        <About />
         <ProjectsGrid />
+        <About />
       </Layout>
       <Footer />
     </>

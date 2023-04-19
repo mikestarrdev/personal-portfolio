@@ -12,7 +12,7 @@ const Drawer = {
     },
     body: {
       _dark: {
-        color: "white",
+        color: "neonYellow",
         bg: "black",
         borderRight: "1px",
       },

@@ -1,10 +1,10 @@
-import { GridItem, SimpleGrid } from "@chakra-ui/react";
+import { GridItem, Heading, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { projectDetails } from "../../utils/projects";
+import { majorProjectDetails } from "../../utils/projects";
 
 const ProjectsGrid = () => {
-  const renderProjects = projectDetails.map((project) => {
+  const renderMajorProjects = majorProjectDetails.map((project) => {
     return (
       <GridItem key={project.title}>
         <ProjectCard
@@ -21,9 +21,23 @@ const ProjectsGrid = () => {
   });
 
   return (
-    <SimpleGrid columns={[1, 2, 2, 4]} spacing="1rem">
-      {renderProjects}
-    </SimpleGrid>
+    <>
+      <Heading
+        as="h2"
+        fontSize={"4xl"}
+        fontWeight="regular"
+        textAlign="center"
+        mb="1.5rem"
+        mt="0.5rem"
+        id="projects"
+      >
+        Projects
+      </Heading>
+
+      <SimpleGrid columns={[1, 1, 3]} spacing="1rem">
+        {renderMajorProjects}
+      </SimpleGrid>
+    </>
   );
 };
 

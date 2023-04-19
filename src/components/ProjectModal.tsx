@@ -33,9 +33,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
       return (
         <ReactPlayer
           url={url}
-          maxW="fit"
-          // w="100%"
-          // h="100%"
+          w="fit"
           position="absolute"
           top={0}
           left={0}
@@ -55,7 +53,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
         label="Video demo"
         aria-label="Video demo"
         fontSize="lg"
-        placement="top"
+        placement="bottom"
         hasArrow
       >
         {/* replacement for button */}
@@ -70,8 +68,8 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
             src={`${thumbnail}`}
             alt={`${title} demo`}
             _dark={{
-              border: "1px white solid",
-              rounded: "sm",
+              border: "4px white solid",
+              rounded: "md",
             }}
           />
         </Box>
@@ -89,7 +87,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
           </ModalBody>
 
           <ModalFooter>
-            <Button variant="outline" mr={3} onClick={onClose}>
+            <Button variant="links" mr={3} onClick={onClose}>
               Close
             </Button>
           </ModalFooter>

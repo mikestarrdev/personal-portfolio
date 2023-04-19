@@ -12,9 +12,12 @@ const Navbar = () => {
     <HStack
       justifyContent="space-between"
       border="1px"
-      bg="gray.300"
+      bg="blue.700"
       p="0.5rem"
-      _dark={{ bg: "black" }}
+      _dark={{
+        bg: "black",
+        borderColor: "neonYellow",
+      }}
     >
       <Box>
         <MenuDrawer />
@@ -24,14 +27,13 @@ const Navbar = () => {
           <IconButton
             aria-label="toggle theme"
             rounded="md"
-            size="md"
             onClick={toggleColorMode}
             icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
           />
         </Box>
-        <Box>
+        {/* <Box>
           <ConnectWallet />
-        </Box>
+        </Box> */}
       </HStack>
     </HStack>
   );
