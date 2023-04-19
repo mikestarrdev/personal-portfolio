@@ -38,7 +38,7 @@ export const majorProjectDetails: MainProjectDetails[] = [
   },
   {
     title: "WrapETH",
-    description: "UI which allows users to wrap and unwrap ETH with no fees",
+    description: "UI which allows users to wrap and unwrap ETH with no fees.",
     thumbnail: "wrapeth.png",
     videoLink: "https://vimeo.com/766531266",
     github: "https://github.com/raid-guild/wrapeth",
@@ -53,7 +53,7 @@ export const majorProjectDetails: MainProjectDetails[] = [
   },
   {
     title: "Summit",
-    description: "App which aggregates lectures from various conferences",
+    description: "App which aggregates lectures from various conferences.",
     github: null,
     link: "https://withsummit.xyz/",
     technologies: [
@@ -65,8 +65,9 @@ export const majorProjectDetails: MainProjectDetails[] = [
     ],
   },
   {
-    title: "RaidGuild Design System",
-    description: "Design system for branding",
+    title: "Raid Guild Design System",
+    description:
+      "Design system used to brand projects built by the DAO RaidGuild.",
     github: "https://github.com/raid-guild/design-system",
     link: "https://github.com/raid-guild/design-system",
     technologies: ["TypeScript", "Chakra-UI", "storybook"],

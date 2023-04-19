@@ -12,30 +12,9 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const About = () => {
   return (
-    <Box textAlign="center" id="about">
-      <Divider mt="3rem" mb="2rem" />
-      <Box>
-        <Heading as="h2" my="1rem">
-          {/* Crafting the Future: Mike&apos;s Work */}
-          About
-        </Heading>
-        <Text>
-          I&#39;m a passionate software developer who is always eager to learn
-          and grow. I love diving deep into complex projects and using the
-          latest tech to create products that make a difference.
-        </Text>
-        <br />
-        <Text>
-          My forte lies in crafting intuitive and engaging user interfaces that
-          keep users coming back for more. I thrive on using front-end
-          technologies such as TypeScript, JavaScript, React, CSS, and HTML to
-          make the web come alive. And when it comes to the backend, I&#39;m no
-          stranger to NodeJS and Ruby on Rails.
-        </Text>
-        <br />
-      </Box>
+    <Box textAlign="center">
       <Divider my="2rem" />
-      <HStack
+      {/* <HStack
         spacing="1rem"
         justifyContent="center"
         m="auto"
@@ -62,16 +41,16 @@ const About = () => {
           </Flex>
         </Link>
       </HStack>
-      <Divider my="2rem" />
+      <Divider my="2rem" /> */}
 
-      <Box>
+      <Box mb="2rem">
         <Heading as="h3" my="1rem">
           Other Adventures
         </Heading>
         <Text>
           In addition to coding and technology, I have dedicated an
           extraordinary amount of energy to technical mountain climbing, and I
-          thoroughly enjoy scaling enormous peaks. 🏔️
+          thoroughly enjoy scaling enormous peaks 🏔️.
         </Text>
         <br />
         <Text>
@@ -87,8 +66,6 @@ const About = () => {
           pleasures in life that really get me going!
         </Text>
       </Box>
-
-      <Divider my="2rem" />
     </Box>
   );
 };

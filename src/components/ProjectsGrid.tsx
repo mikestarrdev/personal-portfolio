@@ -31,10 +31,10 @@ const ProjectsGrid = () => {
         mt="0.5rem"
         id="projects"
       >
-        Projects
+        Proof-of-Talent
       </Heading>
 
-      <SimpleGrid columns={[1, 1, 3]} spacing={["1rem", "2rem"]}>
+      <SimpleGrid columns={[1, 1, 2]} spacing={["1rem", "2rem"]}>
         {renderMajorProjects}
       </SimpleGrid>
     </>

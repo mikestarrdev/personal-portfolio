@@ -59,7 +59,7 @@ const MenuDrawer = () => {
                   href="contact"
                   _hover={{ textDecoration: "none", cursor: "pointer" }}
                 >
-                  Contact
+                  Contact Me
                 </Link>
               </ListItem>
             </List>
