@@ -6,7 +6,12 @@ const OtherAdventures = () => {
     <Box textAlign="center">
       <Divider my="2rem" />
 
-      <Box mb="2rem">
+      <Box
+        mb="2rem"
+        textAlign="center"
+        w={["full", "full", "80%", "60%"]}
+        m="auto"
+      >
         <Heading as="h3" my="1rem">
           Other Adventures
         </Heading>
