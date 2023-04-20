@@ -15,6 +15,7 @@ const ProjectsGrid = () => {
           github={project.github}
           link={project.link}
           technologies={project.technologies}
+          contributions={project.contributions}
         />
       </GridItem>
     );

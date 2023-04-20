@@ -1,4 +1,4 @@
-import About from "@/components/About";
+import OtherAdventures from "@/components/OtherAdventures";
 import Navbar from "@/components/Navbar";
 import ProjectsGrid from "@/components/ProjectsGrid";
 import Layout from "@/components/Layout";
@@ -12,7 +12,7 @@ export default function Home() {
       <Layout>
         <Welcome />
         <ProjectsGrid />
-        <About />
+        <OtherAdventures />
       </Layout>
       <Footer />
     </>

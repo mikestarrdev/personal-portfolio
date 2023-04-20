@@ -56,10 +56,10 @@ const MenuDrawer = () => {
               {/* <ListItem>NFT Collection</ListItem> */}
               <ListItem>
                 <Link
-                  href="contact"
+                  href="/contact"
                   _hover={{ textDecoration: "none", cursor: "pointer" }}
                 >
-                  Contact Me
+                  Contact
                 </Link>
               </ListItem>
             </List>

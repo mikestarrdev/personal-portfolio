@@ -10,7 +10,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <Box
       w="100%"
       mx="auto"
-      py="1rem"
+      pt="4rem"
+      pb="1rem"
       px={["0.5rem", "1rem", "1rem", "5rem"]}
       justifySelf="center"
     >

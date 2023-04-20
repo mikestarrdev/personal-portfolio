@@ -10,6 +10,9 @@ import {
   HStack,
   Heading,
   Link,
+  List,
+  ListIcon,
+  ListItem,
   Stack,
   Text,
   Tooltip,
@@ -31,6 +34,7 @@ import {
 import { AiOutlineApi } from "react-icons/ai";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import ProjectModal from "./ProjectModal";
+import { BsArrowRightShort } from "react-icons/bs";
 
 const ProjectCard = ({
   title,
@@ -40,53 +44,65 @@ const ProjectCard = ({
   github,
   link,
   technologies,
+  contributions,
 }: MainProjectDetails) => {
   // pass techIcon indo renderIcons
   const techIcon = (technology: string) => {
     let icon;
     switch (technology) {
       case "TypeScript":
-        icon = <SiTypescript />;
+        icon = <SiTypescript size="lg" />;
         break;
       case "JavaScript":
-        icon = <SiJavascript />;
+        icon = <SiJavascript size="lg" />;
         break;
       case "Node.js":
-        icon = <SiNodedotjs />;
+        icon = <SiNodedotjs size="lg" />;
         break;
       case "React":
-        icon = <SiReact />;
+        icon = <SiReact size="lg" />;
         break;
       case "Next.js":
-        icon = <SiNextdotjs />;
+        icon = <SiNextdotjs size="lg" />;
         break;
       case "REST API":
-        icon = <AiOutlineApi />;
+        icon = <AiOutlineApi size="lg" />;
         break;
       case "TailwindCSS":
-        icon = <SiTailwindcss />;
+        icon = <SiTailwindcss size="lg" />;
         break;
       case "Chakra-UI":
-        icon = <SiChakraui />;
+        icon = <SiChakraui size="lg" />;
         break;
       case "GraphQL":
-        icon = <SiGraphql />;
+        icon = <SiGraphql size="lg" />;
         break;
       case "Vercel":
-        icon = <SiVercel />;
+        icon = <SiVercel size="lg" />;
         break;
       case "storybook":
-        icon = <SiStorybook />;
+        icon = <SiStorybook size="lg" />;
         break;
     }
     return icon;
+  };
+
+  const renderContributions = (contributions: string[]) => {
+    return contributions?.map((contribution) => (
+      <ListItem key={contribution}>
+        <ListIcon as={BsArrowRightShort} />
+        {contribution}
+      </ListItem>
+    ));
   };
 
   const renderIcons = (technologies: string[]) =>
     technologies?.map((tech) => {
       return (
         <Tooltip label={tech} key={tech} hasArrow>
-          <Box>{techIcon(tech)}</Box>
+          <Box w="1.5rem" h="1.5rem">
+            {techIcon(tech)}
+          </Box>
         </Tooltip>
       );
     });
@@ -113,7 +129,11 @@ const ProjectCard = ({
           )}
 
           <Text>{description}</Text>
-          <Heading as="h1" fontSize="md">
+          <Box>
+            {contributions && <List>{renderContributions(contributions)}</List>}
+          </Box>
+
+          <Heading as="h3" fontSize="lg" fontWeight="bold">
             Technologies:
           </Heading>
           <HStack>{renderIcons(technologies)}</HStack>

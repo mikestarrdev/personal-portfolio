@@ -22,7 +22,7 @@ export const majorProjectDetails: MainProjectDetails[] = [
   {
     title: "Rite of Moloch",
     description:
-      "HR for DAOs - users can stake tokens to a cohort, signaling commitment and accountability to the community they wish to join. Community admin’ can track the onboarding of new members to a DAO.",
+      "HR for DAOs users can stake tokens to a cohort, signaling commitment and accountability to the community they wish to join. Community admin’ can track the onboarding of new members to a DAO.",
     thumbnail: "rom.png",
     videoLink: "https://vimeo.com/802525256",
     github: "https://github.com/rite-of-moloch/RiteOfMoloch-v1.0",
@@ -63,6 +63,11 @@ export const majorProjectDetails: MainProjectDetails[] = [
       "GraphQL",
       "Chakra-UI",
     ],
+    contributions: [
+      "Upgraded design with Chakra-UI",
+      "Implemented infinite scroll feature which uses React-Query library to pull data from backend server",
+      "Built filter and search features which pass in dynamic variables to Hasura GraphQL queries",
+    ],
   },
   {
     title: "Raid Guild Design System",
@@ -71,12 +76,21 @@ export const majorProjectDetails: MainProjectDetails[] = [
     github: "https://github.com/raid-guild/design-system",
     link: "https://github.com/raid-guild/design-system",
     technologies: ["TypeScript", "Chakra-UI", "storybook"],
+    contributions: [
+      "Integrated React-Hook-Form with Chakra-UI NumberInput component",
+      "Updated Connect Wallet button for rainbowKit integration",
+    ],
   },
   {
     title: "Octav3",
-    description: "Make money from your music NFTs",
+    description:
+      "Make money from your music NFTs. This was a hackathon project for the ETHGlobal `Metabolism` hackathon in August 2022.",
     github: null,
     link: "https://www.octav3.com/",
     technologies: ["JavaScript", "React", "TailwindCSS"],
+    contributions: [
+      "Built components with TailwindCSS",
+      "Initialize project with Next.js",
+    ],
   },
 ];

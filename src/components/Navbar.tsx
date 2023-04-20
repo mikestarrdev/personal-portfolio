@@ -10,6 +10,9 @@ const Navbar = () => {
 
   return (
     <HStack
+      position="fixed"
+      zIndex={1}
+      w="100%"
       justifyContent="space-between"
       border="1px"
       bg="blue.700"

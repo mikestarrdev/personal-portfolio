@@ -10,6 +10,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
+  Text,
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
@@ -50,8 +51,8 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
   return (
     <>
       <Tooltip
-        label="Video demo"
-        aria-label="Video demo"
+        label="Click for video demo"
+        aria-label="Click for video demo"
         fontSize="lg"
         placement="bottom"
         hasArrow
@@ -60,9 +61,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
         <Box
           onClick={onOpen}
           boxShadow="0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"
-          _hover={{
-            transform: "translateY(1px)",
-          }}
+          _hover={{ transform: "translateY(1px)" }}
         >
           <Image
             src={`${thumbnail}`}
@@ -70,6 +69,9 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
             _dark={{
               border: "4px white solid",
               rounded: "md",
+            }}
+            _hover={{
+              cursor: "pointer",
             }}
           />
         </Box>
