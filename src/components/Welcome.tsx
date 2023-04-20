@@ -12,7 +12,7 @@ const Welcome = () => {
           fontWeight="bold"
           _dark={{ color: "neonYellow" }}
         >
-          Welcome to my portfolio!
+          Welcome To My Portfolio!
         </Heading>
 
         <Box textAlign="center" w={["full", "full", "80%", "60%"]} m="auto">
