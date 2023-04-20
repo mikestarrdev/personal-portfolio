@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/forms/contactForm";
-import { Box, Flex, Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 

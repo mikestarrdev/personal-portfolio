@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsMoonFill, BsSun } from "react-icons/bs";
-import ConnectWallet from "./ConnectWallet";
+// import ConnectWallet from "./ConnectWallet";
 
 /**
  * @remarks drawer gets rendered in Navbar component. Clicking Hamburger icon opens drawer

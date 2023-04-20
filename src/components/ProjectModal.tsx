@@ -10,7 +10,6 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Text,
   Tooltip,
   useDisclosure,
 } from "@chakra-ui/react";
