@@ -1,4 +1,4 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
 const OtherAdventures = () => {
@@ -29,6 +29,20 @@ const OtherAdventures = () => {
         But let&#39;s get real - nothing beats a delicious cup of coffee
         (aeropress is my go-to) and some scrumptious food. It&#39;s the simple
         pleasures in life that really get me going!
+      </Text>
+      <br />
+      <Text>
+        If you want to get in touch, click on the hamburger icon in the upper
+        left corner, go to the{" "}
+        <Link
+          href="/contact"
+          color="brand.accent"
+          _dark={{ color: "neonYellow" }}
+        >
+          {" "}
+          Contact
+        </Link>{" "}
+        page, and then send me a message!
       </Text>
     </Box>
   );
