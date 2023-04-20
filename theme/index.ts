@@ -2,6 +2,7 @@ import { ThemeConfig, extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Divider from "./components/Divider";
 import Drawer from "./components/Drawer";
 import Heading from "./components/Heading";
 import Input from "./components/Input";
@@ -19,6 +20,7 @@ const colors = {
 const components = {
   Alert,
   Button,
+  Divider,
   Drawer,
   Heading,
   Input,

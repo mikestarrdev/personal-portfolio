@@ -1,12 +1,4 @@
-import {
-  Box,
-  Divider,
-  Flex,
-  HStack,
-  Heading,
-  Link,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Heading, Link, Text } from "@chakra-ui/react";
 import React from "react";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
@@ -55,7 +47,6 @@ const Welcome = () => {
           well.
         </Text> */}
         </Box>
-        {/* <Divider my="2rem" /> */}
         <HStack
           spacing="1rem"
           justifyContent="center"
@@ -84,7 +75,6 @@ const Welcome = () => {
           </Link>
         </HStack>
       </Box>
-      <Divider my="2rem" />
     </>
   );
 };

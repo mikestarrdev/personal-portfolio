@@ -139,7 +139,7 @@ const ProjectCard = ({
           <HStack>{renderIcons(technologies)}</HStack>
         </Stack>
       </CardBody>
-      <Divider />
+      <Divider w="90%" />
       <CardFooter>
         <ButtonGroup spacing="2" w="full">
           <Box w="50%">
