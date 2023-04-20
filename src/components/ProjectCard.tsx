@@ -127,7 +127,14 @@ const ProjectCard = ({
               videoLink={videoLink}
             />
           )}
-
+          {thumbnail && (
+            <Text textAlign="center" fontSize="sm" fontWeight="bold">
+              (Click thumbnail to watch video demo)
+            </Text>
+          )}
+          <Heading as="h4" fontSize="base" fontWeight="bold">
+            Description:
+          </Heading>
           <Text>{description}</Text>
           <Box>
             {contributions && <List>{renderContributions(contributions)}</List>}

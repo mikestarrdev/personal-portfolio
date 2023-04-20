@@ -79,7 +79,7 @@ const ProjectModal = ({ title, thumbnail, videoLink }: ProjectModalProps) => {
       <Modal size="2xl" isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>{title}</ModalHeader>
+          <ModalHeader>{title} - video demo</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Box position="relative" overflow="scroll">
