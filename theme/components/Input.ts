@@ -41,6 +41,7 @@ const Input = defineMultiStyleConfig({
         _hover: {
           bg: "gray.100",
           transform: "translateY(0.5px)",
+          cursor: "pointer",
         },
         _active: {
           boxShadow: "1px 1px #825c2c",
