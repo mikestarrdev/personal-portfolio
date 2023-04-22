@@ -32,17 +32,15 @@ const OtherAdventures = () => {
       </Text>
       <br />
       <Text>
-        If you want to get in touch, click on the hamburger icon in the upper
-        left corner, go to the{" "}
+        If you want to get in touch,
         <Link
           href="/contact"
           color="brand.accent"
           _dark={{ color: "neonYellow" }}
         >
           {" "}
-          Contact
-        </Link>{" "}
-        page, and then send me a message!
+          send me a message!
+        </Link>
       </Text>
     </Box>
   );

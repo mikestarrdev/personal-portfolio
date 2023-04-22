@@ -19,13 +19,10 @@ const Footer = () => {
           borderTop: "solid 1px #FFFF00",
         }}
       >
-        <Link
-          href="https://github.com/personnamedmike/personal-portfolio"
-          target="_blank"
-        >
+        <Link href="https://github.com/personnamedmike/" target="_blank">
           <Flex alignItems="center">
             <FaGithub />
-            <Text ml="0.5rem">Source code</Text>
+            <Text ml="0.5rem">GitHub</Text>
           </Flex>
         </Link>
         <Link href="https://linkedin.com/in/mike-starr" target="_blank">

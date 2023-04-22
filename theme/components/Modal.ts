@@ -4,7 +4,7 @@ const helpers = createMultiStyleConfigHelpers(["header", "dialog", "footer"]);
 
 const Modal = helpers.defineMultiStyleConfig({
   baseStyle: {
-    headers: {
+    header: {
       _dark: {
         bg: "black",
         color: "neonYellow",

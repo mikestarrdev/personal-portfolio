@@ -36,9 +36,15 @@ const Welcome = () => {
           <br />
           <Text>
             So go ahead, scroll down and check out the amazing projects I&#39;ve
-            worked on. And hey, if you want to get in touch with me, just click
-            the hamburger icon on the top left and head on over to the Contact
-            page. Let&#39;s connect!
+            worked on. And hey, if you want to get in touch with me,{" "}
+            <Link
+              href="/contact"
+              color="brand.accent"
+              _dark={{ color: "neonYellow" }}
+            >
+              {" "}
+              send me a message!
+            </Link>
           </Text>
           {/* <br />
         <Text>

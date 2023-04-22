@@ -108,13 +108,7 @@ const ProjectCard = ({
     });
 
   return (
-    <Card
-      h="full"
-      _dark={{
-        bg: "black",
-        border: "solid 1px white",
-      }}
-    >
+    <Card>
       <CardBody>
         <Stack spacing="3" overflowY="scroll">
           <Heading as="h2" fontSize={["2xl"]} textAlign="center">
