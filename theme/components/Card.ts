@@ -11,7 +11,6 @@ const Card = helpers.defineMultiStyleConfig({
       _dark: {
         bg: "black",
         border: "solid 1px white",
-        rounded: "sm",
       },
     },
   },
