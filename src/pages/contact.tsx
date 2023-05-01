@@ -12,7 +12,7 @@ const Contact = () => {
       <Box
         display="flex"
         flexDir="column"
-        h="97vh"
+        h="100dvh"
         alignContent="space-between"
         justifyContent="space-between"
       >

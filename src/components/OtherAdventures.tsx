@@ -32,13 +32,12 @@ const OtherAdventures = () => {
       </Text>
       <br />
       <Text>
-        If you want to get in touch,
+        If you want to get in touch,{" "}
         <Link
           href="/contact"
           color="brand.accent"
           _dark={{ color: "neonYellow" }}
         >
-          {" "}
           send me a message!
         </Link>
       </Text>
