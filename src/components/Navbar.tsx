@@ -46,6 +46,7 @@ const Navbar = () => {
             rounded="md"
             onClick={toggleColorMode}
             icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
+            color='black'
           />
         </Box>
       </HStack>

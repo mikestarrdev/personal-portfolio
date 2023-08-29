@@ -1,17 +1,13 @@
 import React from "react";
 import {
-  Box,
   Button,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
-  HStack,
   Heading,
-  IconButton,
   Link,
   List,
   ListItem,
@@ -20,12 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsMoonFill, BsSun } from "react-icons/bs";
-// import ConnectWallet from "./ConnectWallet";
 
-/**
- * @remarks drawer gets rendered in Navbar component. Clicking Hamburger icon opens drawer
- * @returns Chakra-UI Drawer component
- */
 const MenuDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();

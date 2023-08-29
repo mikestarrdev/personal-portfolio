@@ -43,12 +43,7 @@ const Welcome = () => {
             In 2020, I dove into software development, starting with JavaScript. Feeling the pull, I took it up a notch. I enrolled at <span style={{fontWeight: "bold"}}>Flatiron School</span> for full-stack software engineering. There, I got hands-on with languages and tech: JavaScript, React, Ruby, Ruby on Rails, REST API, Sinatra, and Active Record. But Flatiron wasn&#39;t just about coding; it taught me <em>how to learn</em>. That experience boosted my foundation in software dev and my confidence.
           </Text>
           <br />
-          <Heading as="h3" fontSize="x-large" fontWeight="bold">Stepping into the World of Blockchain</Heading>
-          <Text>
-            After graduation, I explored the blockchain ecosystem. I participated in top hackathons:
-          </Text>
-          <br />
-          <Heading as="h3" fontSize="x-large" fontWeight="bold">Stepping into the World of Blockchain</Heading>
+          <Heading as="h3" fontSize="x-large" fontWeight="bold">Entering the Technical World of Blockchain</Heading>
           <Text>
             After graduation, I explored the blockchain ecosystem by participating in renowned hackathons including ETH Global New York, ETH Global Metabolism, ETH Online 2022, and ETH Denver 2023. Notably, during ETH Global Metabolism, my team was awarded a prize by Filecoin for our innovative use of nft.storage, which leverages IPFS.
           </Text>

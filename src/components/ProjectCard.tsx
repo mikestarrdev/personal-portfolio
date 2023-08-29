@@ -125,7 +125,7 @@ const ProjectCard = ({
               videoLink={videoLink}
             />
           )}
-          {thumbnail && (
+          {videoLink && (
             <Text textAlign="center" fontSize="sm" fontWeight="bold">
               (Click thumbnail to watch video demo)
             </Text>
