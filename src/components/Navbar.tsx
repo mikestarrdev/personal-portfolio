@@ -16,7 +16,9 @@ const Navbar = () => {
       justifyContent="space-between"
       border="1px"
       bg="blue.700"
-      p="0.5rem"
+      py={2}
+      pl={4}
+      pr={2}
       color='white'
       fontWeight='semibold'
       _dark={{
@@ -24,7 +26,7 @@ const Navbar = () => {
         borderColor: "neonYellow",
       }}
     >
-      <HStack spacing={4}>
+      <HStack spacing={8}>
         <Link href='#'>Home</Link>
         <Link href='#about'>About</Link>
         <Link href='#projects'>Projects</Link>

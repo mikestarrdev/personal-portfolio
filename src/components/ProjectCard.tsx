@@ -17,7 +17,7 @@ import {
   Text,
   Tooltip,
 } from "@chakra-ui/react";
-import { MainProjectDetails } from "../../types/ProjectDetails";
+import { MajorProjectDetails } from "../../types/ProjectDetails";
 import { FaGithub } from "react-icons/fa";
 import {
   SiTypescript,
@@ -30,11 +30,13 @@ import {
   SiVercel,
   SiNextdotjs,
   SiStorybook,
+  SiStyledcomponents,
 } from "react-icons/si";
 import { AiOutlineApi } from "react-icons/ai";
 import { RxOpenInNewWindow } from "react-icons/rx";
 import ProjectModal from "./ProjectModal";
 import { BsArrowRightShort } from "react-icons/bs";
+import { Languages } from "../../types/technologies";
 
 const ProjectCard = ({
   title,
@@ -45,44 +47,46 @@ const ProjectCard = ({
   link,
   technologies,
   contributions,
-}: MainProjectDetails) => {
-  // pass techIcon indo renderIcons
-  const techIcon = (technology: string) => {
+}: MajorProjectDetails) => {
+  const techIcon = (technology: Languages) => {
     let icon;
     switch (technology) {
-      case "TypeScript":
+      case Languages.TypeScript:
         icon = <SiTypescript size="lg" />;
         break;
-      case "JavaScript":
+      case Languages.JavaScript:
         icon = <SiJavascript size="lg" />;
         break;
-      case "Node.js":
+      case Languages.NodeJs:
         icon = <SiNodedotjs size="lg" />;
         break;
-      case "React":
+      case Languages.React:
         icon = <SiReact size="lg" />;
         break;
-      case "Next.js":
+      case Languages.NextJs:
         icon = <SiNextdotjs size="lg" />;
         break;
-      case "REST API":
+      case Languages.RestApi:
         icon = <AiOutlineApi size="lg" />;
         break;
-      case "TailwindCSS":
+      case Languages.TailwindCSS:
         icon = <SiTailwindcss size="lg" />;
         break;
-      case "Chakra-UI":
+      case Languages.ChakraUI:
         icon = <SiChakraui size="lg" />;
         break;
-      case "GraphQL":
+      case Languages.GraphQL:
         icon = <SiGraphql size="lg" />;
         break;
-      case "Vercel":
+      case Languages.Vercel:
         icon = <SiVercel size="lg" />;
         break;
-      case "storybook":
+      case Languages.Storybook:
         icon = <SiStorybook size="lg" />;
-        break;
+      break;
+      case Languages.StyledComponents:
+        icon = <SiStyledcomponents size="lg" />;
+      break;
     }
     return icon;
   };
@@ -96,16 +100,16 @@ const ProjectCard = ({
     ));
   };
 
-  const renderIcons = (technologies: string[]) =>
-    technologies?.map((tech) => {
-      return (
-        <Tooltip label={tech} key={tech} hasArrow>
-          <Box w="1.5rem" h="1.5rem">
-            {techIcon(tech)}
-          </Box>
-        </Tooltip>
-      );
-    });
+  const renderIcons = (technologies: Languages[]) =>
+  technologies.map((tech) => {
+    const iconElement = techIcon(tech);
+    return (
+      <Tooltip label={tech} key={tech} hasArrow>
+        <Box w="1.5rem" h="1.5rem">{iconElement}</Box>
+      </Tooltip>
+    );
+  });
+
 
   return (
     <Card>

@@ -2,8 +2,7 @@ import { defineStyleConfig } from "@chakra-ui/react";
 
 const Heading = defineStyleConfig({
   baseStyle: {
-    fontWeight: "light",
-    textTransform: "uppercase",
+    fontWeight: "semibold",
   },
 });
 

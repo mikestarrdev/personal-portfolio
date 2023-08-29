@@ -15,7 +15,7 @@ const Welcome = () => {
         >
           Mike Starr&#39;s Portfolio
         </Heading>
-         <TypeAnimation
+        <TypeAnimation
           sequence={[
             'Frontend Developer',
             1000,

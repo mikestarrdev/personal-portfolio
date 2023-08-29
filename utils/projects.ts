@@ -1,39 +1,65 @@
-import { MainProjectDetails } from '../types/ProjectDetails';
+import { MajorProjectDetails } from '../types/ProjectDetails';
+import { Languages } from '../types/technologies';
 
-export const majorProjectDetails: MainProjectDetails[] = [
+export const majorProjectDetails: MajorProjectDetails[] = [
+  {
+    title: 'AirSwap Voter Rewards',
+    description:
+      'Voters can stake tokens through the app, vote on on-chain proposals, and then claim rewards from a pool. (App is still a work in progress)',
+    thumbnail: 'voter-rewards.png',
+    videoLink: undefined,
+    github: 'https://github.com/airswap/airswap-voter-rewards',
+    link: 'https://airswap.io',
+    technologies: [
+      Languages.TypeScript,
+      Languages.React,
+      Languages.StyledComponents,
+    ],
+  },
+  {
+    title: 'AirSwap Web',
+    description: 'A decentralized protocol that has facilitated trades worth over $3.68 billion in value.',
+    thumbnail: 'airswap.png',
+    videoLink: undefined,
+    github: 'https://github.com/airswap/airswap-web',
+    link: 'https://airswap.io',
+    technologies: [
+      Languages.TypeScript,
+      Languages.React,
+      Languages.StyledComponents,
+    ],
+  },
   {
     title: 'Kaching',
-    description:
-      'Hackathon project utilizing account abstraction, enabling seamless sign-in via Google or Discord and secure cryptocurrency transfers between users.',
+    description: 'Hackathon project utilizing account abstraction, enabling seamless sign-in via Google or Discord and secure cryptocurrency transfers between users.',
     thumbnail: 'kaching.png',
     videoLink: 'https://vimeo.com/817957065',
     github: 'https://github.com/personnamedmike/KachingETHDenver',
     link: 'https://kaching-eth-denver-trkd.vercel.app/',
     technologies: [
-      'TypeScript',
-      'JavaScript',
-      'Node.js',
-      'Next.js',
-      'REST API',
-      'Chakra-UI',
-      'Vercel',
+      Languages.TypeScript,
+      Languages.JavaScript,
+      Languages.NodeJs,
+      Languages.NextJs,
+      Languages.RestApi,
+      Languages.ChakraUI,
+      Languages.Vercel,
     ],
   },
   {
     title: 'Rite of Moloch',
-    description:
-      'HR for DAOs users can stake tokens to a cohort, signaling commitment and accountability to the community they wish to join. Community admin’ can track the onboarding of new members to a DAO.',
+    description: 'HR for DAOs users can stake tokens to a cohort, signaling commitment and accountability to the community they wish to join. Community admin’ can track the onboarding of new members to a DAO.',
     thumbnail: 'rom.png',
     videoLink: 'https://vimeo.com/802525256',
     github: 'https://github.com/rite-of-moloch/RiteOfMoloch-v1.0',
     link: 'https://rom.wtf',
     technologies: [
-      'TypeScript',
-      'JavaScript',
-      'Next.js',
-      'GraphQL',
-      'Chakra-UI',
-      'Vercel',
+      Languages.TypeScript,
+      Languages.JavaScript,
+      Languages.NextJs,
+      Languages.GraphQL,
+      Languages.ChakraUI,
+      Languages.Vercel,
     ],
   },
   {
@@ -44,11 +70,11 @@ export const majorProjectDetails: MainProjectDetails[] = [
     github: 'https://github.com/raid-guild/wrapeth',
     link: 'https://wrapeth.com',
     technologies: [
-      'TypeScript',
-      'JavaScript',
-      'Next.js',
-      'REST API',
-      'Chakra-UI',
+      Languages.TypeScript,
+      Languages.JavaScript,
+      Languages.NextJs,
+      Languages.RestApi,
+      Languages.ChakraUI,
     ],
   },
   {
@@ -57,11 +83,11 @@ export const majorProjectDetails: MainProjectDetails[] = [
     github: null,
     link: 'https://withsummit.xyz/',
     technologies: [
-      'TypeScript',
-      'JavaScript',
-      'Next.js',
-      'GraphQL',
-      'Chakra-UI',
+      Languages.TypeScript,
+      Languages.JavaScript,
+      Languages.NextJs,
+      Languages.GraphQL,
+      Languages.ChakraUI,
     ],
     contributions: [
       'Upgraded design with Chakra-UI',
@@ -71,11 +97,14 @@ export const majorProjectDetails: MainProjectDetails[] = [
   },
   {
     title: 'Raid Guild Design System',
-    description:
-      'Design system used to brand projects built by the DAO RaidGuild.',
+    description: 'Design system used to brand projects built by the DAO RaidGuild.',
     github: 'https://github.com/raid-guild/design-system',
     link: 'https://github.com/raid-guild/design-system',
-    technologies: ['TypeScript', 'Chakra-UI', 'storybook'],
+    technologies: [
+      Languages.TypeScript,
+      Languages.ChakraUI,
+      Languages.Storybook,
+    ],
     contributions: [
       'Integrated React-Hook-Form with Chakra-UI NumberInput component',
       'Updated Connect Wallet button for rainbowKit integration',
@@ -83,11 +112,14 @@ export const majorProjectDetails: MainProjectDetails[] = [
   },
   {
     title: 'Octav3',
-    description:
-      'Make money from your music NFTs. This was a hackathon project for the ETHGlobal `Metabolism` hackathon in August 2022.',
+    description: 'Make money from your music NFTs. This was a hackathon project for the ETHGlobal “Metabolism” hackathon in August 2022.',
     github: null,
     link: 'https://www.octav3.com/',
-    technologies: ['JavaScript', 'React', 'TailwindCSS'],
+    technologies: [
+      Languages.JavaScript,
+      Languages.React,
+      Languages.TailwindCSS,
+    ],
     contributions: [
       'Built components with TailwindCSS',
       'Initialize project with Next.js',

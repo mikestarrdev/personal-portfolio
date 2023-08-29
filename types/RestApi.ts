@@ -10,3 +10,4 @@ export type Info = {
     [k: string]: string;
   };
 };
+
