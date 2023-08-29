@@ -27,9 +27,10 @@ const Navbar = () => {
       }}
     >
       <HStack spacing={8}>
-        <Link href='#'>Home</Link>
+        <Link href='/'>Home</Link>
         <Link href='#about'>About</Link>
         <Link href='#projects'>Projects</Link>
+        <Link href='/contact'>Contact</Link>
       </HStack>
       <HStack>
         <Box>

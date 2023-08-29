@@ -13,22 +13,22 @@ const Welcome = () => {
           fontWeight="bold"
           _dark={{ color: "neonYellow" }}
         >
-          Mike Starr&#39;s Portfolio
+          Welcome To My Portfolio!
         </Heading>
         <TypeAnimation
           sequence={[
-            'Frontend Developer',
+            'Frontend Developer...',
             1000,
-            'React + TypeScript Developer',
+            'React + TypeScript Developer...',
             1000,
-            'Responsive web design',
+            'Responsive web design...',
             1000,
-            'JavaScript, CSS, HTML',
+            'JavaScript, CSS, HTML...',
             1000
           ]}
           wrapper="span"
           speed={50}
-          style={{ fontSize: '2em', display: 'inline-block', marginBottom: '4rem' }}
+          style={{ fontSize: '2em', display: 'inline-block', marginBottom: '2rem' }}
           repeat={Infinity}
         />
 
