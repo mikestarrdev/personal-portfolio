@@ -1,7 +1,7 @@
-import { Box, HStack, useColorMode, IconButton } from "@chakra-ui/react";
+import { Box, HStack, useColorMode, IconButton, Link } from "@chakra-ui/react";
 
 import React from "react";
-import MenuDrawer from "./MenuDrawer";
+// import MenuDrawer from "./MenuDrawer";
 import { BsSun, BsMoonFill } from "react-icons/bs";
 // import ConnectWallet from "./ConnectWallet";
 
@@ -17,14 +17,18 @@ const Navbar = () => {
       border="1px"
       bg="blue.700"
       p="0.5rem"
+      color='white'
+      fontWeight='semibold'
       _dark={{
         bg: "black",
         borderColor: "neonYellow",
       }}
     >
-      <Box>
-        <MenuDrawer />
-      </Box>
+      <HStack spacing={4}>
+        <Link href='#'>Home</Link>
+        <Link href='#about'>About</Link>
+        <Link href='#projects'>Projects</Link>
+      </HStack>
       <HStack>
         <Box>
           <IconButton
@@ -34,9 +38,6 @@ const Navbar = () => {
             icon={colorMode === "dark" ? <BsMoonFill /> : <BsSun />}
           />
         </Box>
-        {/* <Box>
-          <ConnectWallet />
-        </Box> */}
       </HStack>
     </HStack>
   );
