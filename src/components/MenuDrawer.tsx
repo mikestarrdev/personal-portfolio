@@ -53,7 +53,16 @@ const MenuDrawer = () => {
                   Home
                 </Link>
               </ListItem>
-              {/* <ListItem>NFT Collection</ListItem> */}
+              <ListItem>
+                <Link href="/#about" _hover={{ textDecoration: "none" }}>
+                  About
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/#projects" _hover={{ textDecoration: "none" }}>
+                  Projects
+                </Link>
+              </ListItem>
               <ListItem>
                 <Link
                   href="/contact"

@@ -3,6 +3,7 @@ import { Box, HStack, useColorMode, IconButton, Link } from "@chakra-ui/react";
 import React from "react";
 // import MenuDrawer from "./MenuDrawer";
 import { BsSun, BsMoonFill } from "react-icons/bs";
+import MenuDrawer from "./MenuDrawer";
 // import ConnectWallet from "./ConnectWallet";
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
       border="1px"
       bg="blue.700"
       py={2}
-      pl={4}
+      pl={[2, 2, 4]}
       pr={2}
       color='white'
       fontWeight='semibold'
@@ -26,12 +27,18 @@ const Navbar = () => {
         borderColor: "neonYellow",
       }}
     >
-      <HStack spacing={8}>
-        <Link href='/'>Home</Link>
-        <Link href='#about'>About</Link>
-        <Link href='#projects'>Projects</Link>
-        <Link href='/contact'>Contact</Link>
-      </HStack>
+
+        <Box display={["block", "block", "none"]}>
+          <MenuDrawer />
+        </Box>
+        <Box display={["none", "none", "block"]}>
+          <HStack spacing={8}>
+          <Link href='/'>Home</Link>
+          <Link href='#about'>About</Link>
+          <Link href='#projects'>Projects</Link>
+          <Link href='/contact'>Contact</Link>
+        </HStack>
+      </Box>
       <HStack>
         <Box>
           <IconButton
