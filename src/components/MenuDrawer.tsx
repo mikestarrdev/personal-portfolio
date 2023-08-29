@@ -74,11 +74,8 @@ const MenuDrawer = () => {
             </List>
           </DrawerBody>
 
-          <DrawerFooter>
+          {/* <DrawerFooter>
             <HStack w="full" justifyContent="space-between">
-              {/* <Box>
-                <ConnectWallet />
-              </Box> */}
               <Box>
                 <IconButton
                   aria-label="toggle theme"
@@ -88,7 +85,7 @@ const MenuDrawer = () => {
                 />
               </Box>
             </HStack>
-          </DrawerFooter>
+          </DrawerFooter> */}
         </DrawerContent>
       </Drawer>
     </>
